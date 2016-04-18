@@ -89,17 +89,18 @@ How did I know that "vdb" is the name of the hard disk I added? I simply said "l
 
 mkfs.xfs -i size=512 /dev/vdb1 - Run this command to format the partition we created. "vdb1" is the name of the partition, I saw this at the time of creation after running the previous command. "512" is the filesystem size, a term we aren't delving into right now. I just know that it has nothing to do with the size of the partition.
 
-mkdir -p /export/vdb1 && mount /dev/vdb1 /export/vdb1 && mkdir -p /export/vdb1/brick  - we are mounting the partition (not sure why) and  creating a directory called "brick" under "vdb1".
+mkdir -p /export/vdb1 && mount /dev/vdb1 /export/vdb1 && mkdir -p /export/vdb1/brick
 
-echo "/dev/vdb1 /export/vdb1 xfs defaults 0 0"  >> /etc/fstab - Adding entry to fstab, not sure why this is done.
+We are creating a new directory "vdb1" under the directory "export" (using 'mkdir -p'). It has the same name as the partition 'vdb1' on which it is being mounted using the next command ('mount /dev/vdb1 /export/vdb1'). 
+With the last command, we are just creating a directory called "brick" under "vdb1" where we intend to store Gluster data.
+
+echo "/dev/sdb1 /export/sdb1 xfs defaults 0 0"  >> /etc/fstab - Adding entry to fstab, this is done so that in case of system reboots, the system has a record of the mount of directory "vdb1" to the partition "/dev/vdb1".
 
 gluster volume create gv0 replica 2 192.168.122.227:/export/vdb1/brick 192.168.122.109:/export/vdb1/brick - creating a distributed gluster volume by specifying the IP addresses of both the servers
 
-gluster volume info - just to check details of our newly created volume
+gluster volume info - just to check details of our newly created volume.
 
-gluster volume start gv0 - start the volume so that it becomes open for business :P
-
-Done Dana Done!!
+gluster volume start gv0 - start the volume so that it becomes open for business.
 
 
  
