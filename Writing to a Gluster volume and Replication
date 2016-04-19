@@ -1,0 +1,55 @@
+
+To start writing to a Gluster volume:
+
+From any one machine in the cluster (in our case, it's 192.168.122.109), you may run these commands to test replication.
+
+1. mkdir mount_point 
+
+This command creates a directory called as 'mount_point' under root, because you are logged in to root. This is where we will 
+store our files that we want to save and replicate. The directory can be called anything, we are calling it 'mount_point'.
+
+2. mount -t glusterfs 192.168.122.109:/gv0 /root/mount_point/ 
+
+This mounts our directory "mount_point" to the Gluster volume 'gv0' that we created.
+
+3. cd mount_point (Getting into the directory)
+
+4. touch f1 f2 f3 (create 3 new files in the directory)
+
+Now, from the other machine (in our case, the other machine in the cluster is 192.168.122.227), open /export/vdb1/brick to 
+view the files (if everything is right, this should display the directory 'mount_point' and within it, the files f1, f2 and f3). This directory will also be accessible under /export/vdb1/brick in the current machine, which is 192.168.122.109.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Writing from a remote client machine (on which gluster-client is installed, this machine does not need to have glusterfs server 
+installed).
+
+mkdir mount_host (we are creating this inside home/anubha)
+
+ssh 
+
+ssh-keygen
+ssh-copy-id root@192.168.122.109
+
+mount
+
+mount -t glusterfs 192.168.122.109:/gv0 /home/anubha/mount_host/
+
+The 'mount_host' directory should be visible under 
+192.168.122.109/export/vdb1/brick and under 192.168.122.227/export/vdb1/brick
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
