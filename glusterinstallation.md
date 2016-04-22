@@ -41,7 +41,7 @@ This is done so that the OS can be installed on one physical volume while the ot
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-Installing GlusterFS using a Virtual Machine Manager
+#####Installing GlusterFS using a Virtual Machine Manager
 
 The best way to understanding GlusterFs for a beginner is to set it up using virtual instances. This will need a basic understanding of what a virtual machine is.
 
@@ -81,7 +81,7 @@ Once this command is run on both the terminals, the IP addresses should be obtai
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Now to start configuring GlusterFS, 
+#####Now to start configuring GlusterFS, 
 
 1. We need to first find out whether Gluster is running.
 
