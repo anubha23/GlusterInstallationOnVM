@@ -1,7 +1,8 @@
 This document takes the user through steps for installation and configuration of GlusterFS. 
 It is intended to give a feel of what GlusterFS is, to a user who may be installing it for the first time.
 
-####Prerequisites: A basic introduction to GlusterFS and virtual machines.
+#####Prerequisites: 
+A basic introduction to GlusterFS and virtual machines.
 
 #####Some useful terminologies
 
