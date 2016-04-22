@@ -22,7 +22,8 @@ Now that the data is on two machines, we can call it a successful replication.
 
 -------------------------------------------------------------------------------------------------------------------------
 
-Writing from a remote client machine (on which gluster-client is installed, this machine does not need to have glusterfs server installed. In most cases, gluster-client will be pre-installed along with the OS.)
+#####Writing from a remote client machine 
+(on which gluster-client is installed, this machine does not need to have glusterfs server installed. In most cases, gluster-client will be pre-installed along with the OS.)
 
 In many cases, the servers on which GlusterFS server is installed, are located remotely. In this case, we can follow the below steps to start writing to the volume which is now remote.
 
