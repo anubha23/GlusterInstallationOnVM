@@ -70,6 +70,8 @@ Run the following commands from root on the terminals of *both* the instances:
 
 Gluster should be installed
 
+**Note that though we install GlusterFS on the same virtual disk as the OS, we will be using the other virtual disk to store Gluster data to keep this data separate as mentioned earlier.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Next step is to find out the IPs of both the servers so that Gluster can be configured.
