@@ -46,6 +46,7 @@ This is done so that the OS can be installed on one physical volume while the ot
 The best way to understanding GlusterFs for a beginner is to set it up using virtual instances. This will need a basic understanding of what a virtual machine is.
 
 Steps:
+
 1. Look for the "Virtual Machine Manager" on your Linux machine.
 
 2. Click on Create new connection.
