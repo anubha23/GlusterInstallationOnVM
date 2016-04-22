@@ -118,7 +118,7 @@ How do we know that "vdb" is the name of the virtual disk we added? Simply say "
 mkfs.xfs -i size=512 /dev/vdb1 
 Run this command to format the partition we created. "vdb1" is the name of the partition.
 
-How do we know this? Entering "ls/dev" again on the terminal will show us a list of devices along with any partitions.
+How do we know that "vdb1" is the name of the partition? Entering "ls /dev" again on the terminal will show us a list of devices along with any partitions.
 "512" is the filesystem size, a term we aren't delving into right now. It has nothing to do with the size of the partition.
 
 mkdir -p /export/vdb1 && mount /dev/vdb1 /export/vdb1 && mkdir -p /export/vdb1/brick
