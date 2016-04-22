@@ -30,12 +30,12 @@ Now, to install GlusterFs,
 
 You need a minimum of two servers with two physical volumes (or two hard disks) on each server. 
 
-Why do we need two servers?
+#####Why do we need two servers?
 
 Data is replicated and stored on multiple servers so that if one server fails, the data can be restored from another one. 
 A minimum of two servers is thus required to ensure data safety.
 
-Why do we need two physical volumes / hard disks on each server?
+#####Why do we need two physical volumes / hard disks on each server?
 
 This is done so that the OS can be installed on one physical volume while the other physical volume can be kept for storing Gluster data. At any given time, if we need to format the hard disk on which the OS resides, the Gluster data remains untouched, since it resides on a different volume / hard disk. Also, in the unfortunate event in which the disk on which the OS is installed gets corrupted, the data is safe.
 
