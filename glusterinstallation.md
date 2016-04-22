@@ -84,7 +84,7 @@ Once this command is run on both the terminals, the IP addresses should be obtai
 
 #####Now to start configuring GlusterFS, 
 
-1 We need to first find out whether Gluster is running.
+* We need to first find out whether Gluster is running.
 
 Enter this command to find out: pgrep glusterd
 
@@ -95,7 +95,7 @@ service glusterd start
 Make sure Gluster is running on both the servers before starting to configure.
 
 
-2 We need to link these two servers where Gluster is running. 
+* We need to link these two servers where Gluster is running. 
 
 For this, we need to run this command from the terminal of any *one* server: 
 
@@ -106,7 +106,7 @@ A cluster (network) has thus been formed.
 When this happens, gluster commands that we run on any one of the servers also get executed on the other server. 
 
 
-3 After a cluster is formed, we have to now run some commands in order to store Gluster data on the separate physical volume that we had created (when we added hardware / storage to each instance).
+* After a cluster is formed, we have to now run some commands in order to store Gluster data on the separate physical volume that we had created (when we added hardware / storage to each instance).
 
 cfdisk /dev/vdb 
 This command is used to create a partition on the virtual hard disk that we added in the beginning when we said "Add hardware". A hard disk has to be partitioned and formatted to bring it to a state where it can be used.
